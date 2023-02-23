@@ -1,0 +1,16 @@
+﻿PassionProject5.Models.ItemDto
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>DeleteConfirm</h2>
+
+
+<h2>Are you sure you want to delete this Item?</h2>
+<a href="/Item/List">Cancel</a>
+<h2>@Model.ItemName</h2>
+<div>Item Number @Model.ItemNum</div>
+<form action="/Item/Delete/@Model.ItemID" method="POST">
+    <input type="submit" value="Confirm Delete" />
+
+</form>

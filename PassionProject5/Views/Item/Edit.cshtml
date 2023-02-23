@@ -1,0 +1,19 @@
+﻿@model PassionProject5.Models.ViewModels.UpdateItem
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Item</h2>
+<form action="/Item/Update/@Model.SelectedItem.ItemID" method="POST">
+    <div style="display:none;">
+        <input type="number" name="ItemID" value="@Model.SelectedItem.ItemID" />
+    </div>
+    <div>
+        <label>Item Name: </label><input type="text" name="ItemName" value="@Model.SelectedItem.ItemName" />
+    </div>
+    <div>
+        <label>Item Number: </label><input type="number" name="ItemNum" value="@Model.SelectedItem.ItemNum" />
+    </div>
+    <input type="submit" value="Update Item" />
+</form>
+

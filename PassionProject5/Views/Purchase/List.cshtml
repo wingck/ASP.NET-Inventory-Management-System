@@ -1,0 +1,11 @@
+﻿@model IEnumerable<PassionProject5.Models.PurchaseDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Purchase/New">New Purchase</a>
+@foreach (var purchase in Model) { 
+<h2><a href="/Purchase/Details/@purchase.PurchaseID">@purchase.ItemName</a></h2>
+<div>Purchase Number: @purchase.PurchaseNum</div>
+}

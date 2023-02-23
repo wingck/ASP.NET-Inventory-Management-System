@@ -1,0 +1,22 @@
+﻿@model IEnumerable<PassionProject5.Models.ItemDto>
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Purchase</h2>
+<form action="/Purchase/Create" method="POST">
+    <div>
+        <label>Purchase Number: </label><input type="number" name="PurchaseNum" />
+    </div>
+    <div>
+        <label>Item ID: </label>
+        <select name="ItemID">
+            @foreach (var item in Model)
+            {
+                <option value="@item.ItemID">@item.ItemName</option>
+            }
+        </select>
+    </div>
+    <input type="submit" value="Add Purchase" />
+</form>
+

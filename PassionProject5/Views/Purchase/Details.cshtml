@@ -1,0 +1,12 @@
+﻿@model PassionProject5.Models.ViewModels.DetailsPurchase
+@{
+    ViewBag.Title = "View";
+}
+<a href="/Purchase/List">Go back to list</a>
+<a href="/Purchase/Edit/@Model.SelectedPurchase.PurchaseID">Update</a>
+<a style="color:#ab2020;" href="/Purchase/DeleteConfirm/@Model.SelectedPurchase.PurchaseID">Delete</a>
+<h2>Show Purchase</h2>
+<div>@Model.SelectedPurchase.ItemName</div>
+<div>Purchase Number: @Model.SelectedPurchase.PurchaseNum</div>
+
+
