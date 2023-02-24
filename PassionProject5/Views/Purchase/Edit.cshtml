@@ -2,8 +2,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
-<h2>Update Purchaset</h2>
+<a href="/Purchase/List" class="btn">Go back to list</a><br />
+<h2>Update Purchase</h2>
 <form action="/Purchase/Update/@Model.SelectedPurchase.PurchaseID" method="POST">
     <div style="display:none;">
         <input type="text" name="PurchaseID" value="@Model.SelectedPurchase.PurchaseID" />
@@ -12,7 +12,7 @@
         <label>Purchase Number: </label><input type="number" name="PurchaseNum" value="@Model.SelectedPurchase.PurchaseNum" />
     </div>
     <div>
-        <label>Item ID:</label>
+        <label class="itemoption">Item ID:</label>
         <select name="ItemID">
             @foreach (var item in Model.ItemOptions)
             {
@@ -21,7 +21,7 @@
         </select>
     </div>
     <div>
-        <input type="submit" value="Update Purchase" />
+        <input type="submit" value="Update Purchase" class="btn" />
 
     </div>
 </form>

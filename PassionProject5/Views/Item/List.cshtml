@@ -5,7 +5,7 @@
 <script src="https://kit.fontawesome.com/c54b7d85ab.js" crossorigin="anonymous"></script>
 
 <h2>Items in Inventory</h2>
-<a href="/Item/New" class="clickbtn">Add more items</a>
+<a href="/Item/New" class="btn">Add more items</a>
 <div class="listborder">
 @foreach (var item in Model) { 
 <h2><a href="/Item/Details/@item.ItemID" class="listlink">@item.ItemName</a></h2>

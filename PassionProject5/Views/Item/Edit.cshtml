@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Edit";
 }
-<a href="/Item/List" class="clickbtn">Go back to list</a>
+<a href="/Item/List" class="btn">Go back to list</a>
 <br />
 <h2>Update Item</h2>
 <form action="/Item/Update/@Model.SelectedItem.ItemID" method="POST">
@@ -15,6 +15,6 @@
     <div>
         <label>Item Number: </label><input type="number" name="ItemNum" value="@Model.SelectedItem.ItemNum" />
     </div>
-    <input type="submit" value="Update Item" class="clickbtn" />
+    <input type="submit" value="Update Item" class="btn" />
 </form>
 

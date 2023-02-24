@@ -2,10 +2,13 @@
 @{
     ViewBag.Title = "List";
 }
-
-<h2>List</h2>
-<a href="/Purchase/New">New Purchase</a>
+<div class="listborder">
+<h2>Purchase List</h2>
+<a href="/Purchase/New" class="btn">New Purchase</a>
 @foreach (var purchase in Model) { 
-<h2><a href="/Purchase/Details/@purchase.PurchaseID">@purchase.ItemName</a></h2>
-<div>Purchase Number: @purchase.PurchaseNum</div>
+<div class="purchaselist">
+    <div><a href="/Purchase/Details/@purchase.PurchaseID" class="listlink purchaseline">@purchase.ItemName</a></div>
+<div class="purchaseline">Purchase Number: @purchase.PurchaseNum</div>
+</div>
 }
+</div>

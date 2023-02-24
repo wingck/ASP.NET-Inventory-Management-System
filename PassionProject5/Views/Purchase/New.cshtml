@@ -2,14 +2,14 @@
 @{
     ViewBag.Title = "Create";
 }
-
+<a href="/Purchase/List" class="btn">Go back to list</a><br />
 <h2>Create Purchase</h2>
 <form action="/Purchase/Create" method="POST">
     <div>
         <label>Purchase Number: </label><input type="number" name="PurchaseNum" />
     </div>
     <div>
-        <label>Item ID: </label>
+        <label class="itemname">Item Name: </label>
         <select name="ItemID">
             @foreach (var item in Model)
             {
@@ -17,6 +17,6 @@
             }
         </select>
     </div>
-    <input type="submit" value="Add Purchase" />
+    <input type="submit" value="Add Purchase" class="btn" />
 </form>
 

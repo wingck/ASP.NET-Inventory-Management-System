@@ -3,14 +3,14 @@
     ViewBag.Title = "View";
 }
 <div class="listborder">
-<a href="/Item/List" class="clickbtn">Go back to list</a><br />
-<a href="/Item/Edit/@Model.SelectedItem.ItemID" class="clickbtn">Update</a><br />
-<a href="/Item/DeleteConfirm/@Model.SelectedItem.ItemID" class="clickbtn">Delete</a>
+<a href="/Item/List" class="btn">Go back to list</a><br />
+<a href="/Item/Edit/@Model.SelectedItem.ItemID" class="btn">Update</a><br />
+<a href="/Item/DeleteConfirm/@Model.SelectedItem.ItemID" class="btn">Delete</a>
 <div class="details">
 @Model.SelectedItem.ItemName<br />
 Item Number: @Model.SelectedItem.ItemNum
 </div>
-<div>
+
     <div class="details-small">Purchases related to this item:<br />
     @foreach (var purchase in Model.RelatedPurchases)
     {
@@ -18,5 +18,5 @@ Item Number: @Model.SelectedItem.ItemNum
         <a href="/Purchase/Details/@purchase.PurchaseID" class="details-small" style="margin-left:30px;">Purchase Number: @purchase.PurchaseNum</a><br />
     }
     </div>
-</div>
+
 </div>
