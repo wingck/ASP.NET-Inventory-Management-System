@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: cadetblue;
+    color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -28,3 +30,93 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    line-height: 48px;
+}
+a:hover {
+text-decoration: none;
+animation: changecolor 0.25s linear forwards;
+}
+.listlink:hover {
+    animation: bigfont 0.25s linear forwards, changecolor 0.25s linear forwards;
+}
+ 
+.clickbtn {
+border: 3px solid black;
+border-radius: 10px;
+background-color: black;
+padding: 5px;
+margin-top: 10px;
+}
+.clickbtn:hover {
+ text-decoration:none;
+ color:black;
+ background-image:linear-gradient(270deg, #FFFFF0 0%, #F0E68C 100%);
+ animation:goright 0.75s linear infinite;
+ }
+.listborder {
+border:3px solid black;
+margin-top:30px;
+padding: 20px;
+}
+.listborder h2 {
+text-align: center;
+ }
+.details {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.details-small {
+font-size: 25px;
+}
+.btn {
+background-color:black;
+margin-top:10px;
+border-radius: 10px;
+}
+.btn:hover {
+color:white;
+opacity: 0.5;
+transition: 0.5s;
+}
+.editname {
+    margin-right:14px;
+}
+input {
+    background-color: cadetblue;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@keyframes goright {
+    to {
+        background-position: 110px;
+    }
+}
+@keyframes bigfont {
+    100% {
+        font-size: 48px;
+        font-weight:bolder;
+    }
+}
+@keyframes changecolor {
+    100% {
+        color: #8B4513;
+    }
+}
+
+

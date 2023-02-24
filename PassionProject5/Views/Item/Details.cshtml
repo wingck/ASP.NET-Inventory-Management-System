@@ -2,15 +2,21 @@
 @{
     ViewBag.Title = "View";
 }
-
-<a href="/Item/List">Go back to list</a>
-<a href="/Item/Edit/@Model.SelectedItem.ItemID">Update</a>
-<a style="color:#ab2020;" href="/Item/DeleteConfirm/@Model.SelectedItem.ItemID">Delete</a>
-<h2>@Model.SelectedItem.ItemName</h2>
-<div>Item Number: @Model.SelectedItem.ItemNum</div>
-<div style="margin-top:100px">
-    <h3>Purchases related to this item</h3>
-    @foreach (var purchase in Model.RelatedPurchases) { 
-    <a href="/Purchase/Details/@purchase.PurchaseID">@purchase.PurchaseNum</a>
+<div class="listborder">
+<a href="/Item/List" class="clickbtn">Go back to list</a><br />
+<a href="/Item/Edit/@Model.SelectedItem.ItemID" class="clickbtn">Update</a><br />
+<a href="/Item/DeleteConfirm/@Model.SelectedItem.ItemID" class="clickbtn">Delete</a>
+<div class="details">
+@Model.SelectedItem.ItemName<br />
+Item Number: @Model.SelectedItem.ItemNum
+</div>
+<div>
+    <div class="details-small">Purchases related to this item:<br />
+    @foreach (var purchase in Model.RelatedPurchases)
+    {
+        <a href="/Purchase/Details/@purchase.PurchaseID" class="details-small">Purchase ID: @purchase.PurchaseID</a>
+        <a href="/Purchase/Details/@purchase.PurchaseID" class="details-small" style="margin-left:30px;">Purchase Number: @purchase.PurchaseNum</a><br />
     }
+    </div>
+</div>
 </div>

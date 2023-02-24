@@ -2,15 +2,16 @@
 @{
     ViewBag.Title = "Create";
 }
-
+<a href="/Item/List" class="clickbtn">Go back to list</a>
+<br />
 <h2>Create Item</h2>
 <form action="/Item/Create" method="POST">
     <div>
-        <label>Item Name: </label><input type="text" name="ItemName" />
+        <label class="editname">Item Name: </label><input type="text" name="ItemName" />
     </div>
     <div>
         <label>Item Number: </label><input type="number" name="ItemNum" />
     </div>
-    <input type="submit" value="Add Item" />
+    <input type="submit" value="Add Item" class="clickbtn" />
 </form>
 
