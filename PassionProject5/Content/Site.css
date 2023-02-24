@@ -95,7 +95,7 @@ select {
     text-align: center;
 }
 .itemoption{
-    margin-left: 68px;
+    margin-left: 40px;
 }
 .delete {
 text-align: center;
@@ -108,15 +108,17 @@ text-align:center;
 font-size:32px;
 }
 .purchaseline {
-    line-height: 56px;
+    line-height: 60px;
 }
 .groupdetails {
-font-size: 25px;
+font-size: 32px;
 text-align: center;
 }
 .itemname {
 margin-left: 45px;
 }
+
+
 
 
 

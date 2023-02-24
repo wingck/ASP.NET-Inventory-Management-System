@@ -8,6 +8,6 @@
 <a href="/Item/New" class="btn">Add more items</a>
 <div class="listborder">
 @foreach (var item in Model) { 
-<h2><a href="/Item/Details/@item.ItemID" class="listlink">@item.ItemName</a></h2>
+<h2><a href="/Item/Details/@item.ItemID" class="listlink">@item.ItemName (ID: @item.ItemID)</a></h2>
 }
 </div>

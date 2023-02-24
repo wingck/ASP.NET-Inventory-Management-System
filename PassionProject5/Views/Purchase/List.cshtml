@@ -7,7 +7,7 @@
 <a href="/Purchase/New" class="btn">New Purchase</a>
 @foreach (var purchase in Model) { 
 <div class="purchaselist">
-    <div><a href="/Purchase/Details/@purchase.PurchaseID" class="listlink purchaseline">@purchase.ItemName</a></div>
+    <div><a href="/Purchase/Details/@purchase.PurchaseID" class="listlink purchaseline">@purchase.ItemName (ID @purchase.PurchaseID)</a></div>
 <div class="purchaseline">Purchase Number: @purchase.PurchaseNum</div>
 </div>
 }
