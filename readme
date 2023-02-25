@@ -2,4 +2,4 @@ I am making an inventory database for supermarket. It has two tables, one is ite
 
 I have finished CRUD of both tables, with a little style css. All the basic functions are added successfully.
 
-However, my original plan was after making a new purchase, the item number in the item table will be substracted automatically by the purchase number. If I can make it, I do not have to update each item everytime when a purchase is made. I am till figuring out how to make it. Thank you!!!
+However, my original plan was after making a new purchase, the item number in the item table will be substracted automatically by the purchase number. If I can make it, I do not have to update each item everytime when a purchase is made. I am still figuring out how to make it. Thank you!!!
