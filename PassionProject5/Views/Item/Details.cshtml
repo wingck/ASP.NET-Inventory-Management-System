@@ -8,15 +8,32 @@
 <a href="/Item/DeleteConfirm/@Model.SelectedItem.ItemID" class="btn">Delete</a>
 <div class="details">
 @Model.SelectedItem.ItemName (ID @Model.SelectedItem.ItemID)<br />
-Item Number: @Model.SelectedItem.ItemNum
+Item Number: <span id="itemNum">@Model.SelectedItem.ItemNum</span>
 </div>
 
     <div class="details-small">Purchases related to this item:<br />
     @foreach (var purchase in Model.RelatedPurchases)
     {
         <a href="/Purchase/Details/@purchase.PurchaseID" class="details-small">Purchase ID: @purchase.PurchaseID</a>
-        <a href="/Purchase/Details/@purchase.PurchaseID" class="details-small" style="margin-left:30px;">Purchase Number: @purchase.PurchaseNum</a><br />
+        <a href="/Purchase/Details/@purchase.PurchaseID" class="details-small" style="margin-left:30px;">Purchase Number: <span class="purchaseNum">@purchase.PurchaseNum</span></a><br />
     }
     </div>
-
 </div>
+<script>
+    var itemNum = document.getElementById("itemNum");
+    var originalItemNum = parseInt("@Model.SelectedItem.ItemNum");
+    itemNum.innerHTML = originalItemNum;
+    var myItemNum = parseInt(itemNum.textContent);
+    console.log(myItemNum);
+
+    var purchaseNum = document.getElementsByClassName("purchaseNum");
+    var sum = 0;
+    for (var i = 0; i < purchaseNum.length; i++) {
+        sum += parseInt(purchaseNum[i].textContent);
+        console.log(sum);
+    }
+    var newNum = myItemNum - sum;
+    console.log(newNum);
+
+    itemNum.innerHTML = newNum;
+</script>
