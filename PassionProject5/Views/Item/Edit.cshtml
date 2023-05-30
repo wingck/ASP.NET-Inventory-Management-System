@@ -5,16 +5,15 @@
 <a href="/Item/List" class="btn">Go back to list</a>
 <br />
 <h2>Update Item</h2>
-<form action="/Item/Update/@Model.SelectedItem.ItemID" method="POST">
+<form id="updateForm" action="/Item/Update/@Model.SelectedItem.ItemID" method="POST">
     <div style="display:none;">
         <input type="number" name="ItemID" value="@Model.SelectedItem.ItemID" />
     </div>
     <div>
-        <label class="editname">Item Name: </label><input type="text" name="ItemName" value="@Model.SelectedItem.ItemName" />
+        <label class="editname">Item Name: </label><input type="text" name="ItemName" id="itemName" value="@Model.SelectedItem.ItemName" />
     </div>
     <div>
-        <label>Item Number: </label><input type="number" name="ItemNum" value="@Model.SelectedItem.ItemNum" />
+        <label>Item Number: </label><input type="number" name="ItemNum" id="itemNum" value="@Model.SelectedItem.ItemNum" />
     </div>
     <input type="submit" value="Update Item" class="btn" />
 </form>
-
