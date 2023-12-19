@@ -5,3 +5,5 @@ I have finished CRUD of both tables, with a little style css. All the basic func
 I have created a trigger in purchase table in T-sql. ItemID is the primary key for item table and foreign key for purchase table.
 Once a new purchase is made, the item number having the same ItemID with the purchase will be subtracted by the purchase number.
 Therefore, the item table will be updated automatically.
+
+Video demonstration: https://www.youtube.com/watch?v=4IhGnN3SItg&ab_channel=KaWingChan
